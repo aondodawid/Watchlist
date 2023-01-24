@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1,
+h3,
+h4 {
+  color: #fff;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: #1C1C1C;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+header {
+  background-image: url('./images/image\ 36.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #0E0E0E;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 5rem 2.75rem;
+}
+
+form {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2.5625;
+  letter-spacing: -0.045em;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 0.875;
+  line-height: 1.25rem;
+  font-weight: 800;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: #121212;
+}
+
+.search-input {
+  background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4ZM2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8C14 9.29583 13.5892 10.4957 12.8907 11.4765L17.7071 16.2929C18.0976 16.6834 18.0976 17.3166 17.7071 17.7071C17.3166 18.0976 16.6834 18.0976 16.2929 17.7071L11.4765 12.8907C10.4957 13.5892 9.29583 14 8 14C4.68629 14 2 11.3137 2 8Z' fill='%239CA3AF'/%3e%3c/svg%3e ") no-repeat 10px center;
+  background-color: #A5A5A5;
+}
+
+input[type="search"]::placeholder {
+  padding-left: 2.625rem;
+}

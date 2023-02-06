@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
 
@@ -12,7 +11,9 @@ html {
 
 body,
 h1,
+h3,
 p {
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -69,6 +70,12 @@ h1 {
   line-height: 1.5rem;
 }
 
+h3 {
+  font-size: 1.125rem;
+  line-height: 20px;
+  font-weight: 500;
+}
+
 h4 {
   font-size: 0.875;
   line-height: 1.25rem;
@@ -78,6 +85,7 @@ input {
   outline-style: none;
   color: #fff;
   display: block;
+  line-height: 1;
 }
 
 input[type="search"]::placeholder,
@@ -127,7 +135,6 @@ button {
 }
 
 .search-input {
-  /* background: transparent; */
   background-color: #2E2E2F;
   padding: 9px 13px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
@@ -156,11 +163,64 @@ input[type="search"]:not(:placeholder-shown)+label {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2.625rem;
+  padding: 0 2.75rem;
 }
 
 .movie-icon {
   width: 148px;
-  margin: 25% auto;
+  margin: 20% auto;
+}
+
+.movie-container {
+  display: flex;
+  color: #fff;
+}
+
+.description-container {
+  max-width: 74%;
+  margin-left: 1.13125rem;
+}
+
+
+.movie-poster {
+  max-width: 26%;
+}
+
+.title-container {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 0.6785;
+}
+
+.star-icon {
+  vertical-align: bottom;
+}
+
+.rate {
+  margin-left: .4rem;
+  font-weight: 400;
+  font-size: .75rem;
+  line-height: 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-element {
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.about-element+.about-element {
+  margin-left: 1.125rem;
+}
+
+.plus-icon {
+  vertical-align: bottom;
 }
 
 @media screen and (max-width: 400px) {

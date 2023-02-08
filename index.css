@@ -74,6 +74,11 @@ h3 {
   font-size: 1.125rem;
   line-height: 20px;
   font-weight: 500;
+  /* display: flex;
+  width: fit-content;
+  block-size: fit-content;
+  justify-content: flex-start;
+  flex-grow: 1; */
 }
 
 h4 {
@@ -161,9 +166,7 @@ input[type="search"]:not(:placeholder-shown)+label {
 
 .content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 2.625rem; */
+  flex-direction: column;
   padding: 0 2.75rem;
 }
 
@@ -180,7 +183,7 @@ input[type="search"]:not(:placeholder-shown)+label {
 }
 
 .description-container {
-  max-width: 74%;
+  max-width: 100%;
   margin-left: 1.13125rem;
 }
 
@@ -190,7 +193,9 @@ input[type="search"]:not(:placeholder-shown)+label {
 }
 
 .title-container {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   margin-top: 1rem;
   margin-bottom: 0.6785;
 }
@@ -200,10 +205,16 @@ input[type="search"]:not(:placeholder-shown)+label {
 }
 
 .rate {
+  display: flex;
+  /* justify-content: flex-end; */
   margin-left: .4rem;
   font-weight: 400;
   font-size: .75rem;
   line-height: 20px;
+}
+
+.rate>svg {
+  vertical-align: baseline;
 }
 
 .about-container {

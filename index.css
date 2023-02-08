@@ -163,7 +163,7 @@ input[type="search"]:not(:placeholder-shown)+label {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2.625rem;
+  /* margin-top: 2.625rem; */
   padding: 0 2.75rem;
 }
 
@@ -175,6 +175,8 @@ input[type="search"]:not(:placeholder-shown)+label {
 .movie-container {
   display: flex;
   color: #fff;
+  border-bottom: 1.5px solid #2C2C2C;
+  padding: 1.3125rem 0;
 }
 
 .description-container {
@@ -215,12 +217,24 @@ input[type="search"]:not(:placeholder-shown)+label {
   line-height: 20px;
 }
 
+l,
 .about-element+.about-element {
   margin-left: 1.125rem;
 }
 
 .plus-icon {
-  vertical-align: bottom;
+  vertical-align: text-top;
+}
+
+.about-element {
+  margin: .5rem 0;
+}
+
+.movie-description {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: #A5A5A5;
 }
 
 @media screen and (max-width: 400px) {

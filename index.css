@@ -34,11 +34,6 @@ body {
   background-color: #1C1C1C;
 }
 
-/* a {
-  text-decoration: none;
-  color: unset;
-} */
-
 nav {
   background-image: url('./images/image\ 36.png');
   background-position: center;
@@ -56,22 +51,14 @@ form {
   margin: 0 auto;
 }
 
-h4 {
-  font-weight: 800;
-}
-
 h3 {
   font-size: 1.125rem;
   line-height: 20px;
   font-weight: 500;
-  /* display: flex;
-  width: fit-content;
-  block-size: fit-content;
-  justify-content: flex-start;
-  flex-grow: 1; */
 }
 
 h4 {
+  font-weight: 800;
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin: 1.2rem 0;
@@ -108,6 +95,10 @@ button {
   cursor: pointer;
   background: #4B4B4B;
   border-radius: 0px 6px 6px 0px;
+}
+
+svg {
+  vertical-align: middle;
 }
 
 .wrapper {
@@ -169,23 +160,46 @@ input[type="search"]:not(:placeholder-shown)+label {
   padding: 0 2.75rem;
 }
 
-.movie-icon {
-  width: 148px;
+.movie-icon, .empty-container   {
   margin: 20% auto;
 }
 
-.movie-container {
-  display: flex;
+.movie-icon {
+  width: 148px;
+}
+
+.movie-container, .empty-container  {
   color: #fff;
-  border-bottom: 1.5px solid #2C2C2C;
   padding: 1.3125rem 0;
+}
+
+.movie-container {
+  border-bottom: 1.5px solid #2C2C2C;
+  display: flex;
+}
+
+.empty-container {
+  text-align: center;
+  cursor: pointer;
+}
+
+.empty-container p {
+  color: #787878;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.empty-container span {
+  vertical-align: middle;
+  margin-left: 2px;
 }
 
 .description-container {
   max-width: 100%;
   margin-left: 1.13125rem;
 }
-
 
 .movie-poster {
   max-width: 26%;
@@ -212,7 +226,7 @@ input[type="search"]:not(:placeholder-shown)+label {
   line-height: 20px;
 }
 
-.rate>svg {
+.rate > svg {
   vertical-align: baseline;
 }
 
@@ -255,17 +269,50 @@ l,
   visibility: hidden;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 540px) {
+  .movie-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .movie-poster {
+    max-width: 90%;
+  }
+  .description-container {
+    margin-left: unst;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .text-big {
+    line-height: 1.2;
+  }
+
   .search-section {
     flex-direction: column;
     top: -43px;
   }
 
+  h4 {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .search-input {
+    border-radius: 6px;
+    width: 90%;
+  } 
+
   button {
     margin-top: 1rem;
+    border-radius: 6px;
   }
 
   h4 {
-    margin-left: .5rem;
+    padding: unset;
+  }
+
+  h4 + h4 {
+    margin-left: .8rem;
   }
 }

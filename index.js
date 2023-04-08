@@ -159,8 +159,13 @@ function handleWatchlistBtn(isWatchlist = false) {
         this.innerHTML = renderPlusIcon() + ' Watchlist';
         removeMovieFromLocalStorage(this);
         if (isWatchlist) {
-          if (this.closest('.content').children.length === 1) content.innerHTML = watchListInnerHtml;
-          else this.closest('.movie-container').parentNode.removeChild(this.closest('.movie-container'));
+          if (this.closest('.content').children.length === 1) {
+            content.innerHTML = watchListInnerHtml;
+            const btnBackToSearch = document.querySelector('.empty-container');
+            btnBackToSearch.addEventListener('click', function () {
+              renderEmptySearchList();
+            });
+          } else this.closest('.movie-container').parentNode.removeChild(this.closest('.movie-container'));
         }
       } else {
         addMovieToLocalStorage(this);

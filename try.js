@@ -59,7 +59,7 @@ const searchNotFoundInnerHtml = `
 </div>
 `;
 
-function triggerWatchlist() {
+function renderEmptyWatchList() {
   findMovie.classList.remove('text-big');
   watchlist.classList.add('text-big');
   searchSection.classList.add('hidden');
@@ -187,9 +187,7 @@ async function renderSearchedMovies(movieToLokFor, isClicked = false) {
 }
 
 function renderWatchlist() {
-  let movieArray = [''];
-  if (localStorage.getItem('movieList')) movieArray = localStorage.getItem('movieList').split(',');
-
+  const movieArray = localStorage.getItem('movieList').split(',');
   movieArray.forEach(async (movie) => {
     try {
       const res = await fetch(`http://www.omdbapi.com/?apikey=71aa02e0&i=${movie}`);
@@ -212,10 +210,9 @@ document.addEventListener('input', function (e) {
 });
 
 document.addEventListener('click', (e) => {
-  e.preventDefault();
   switch (e.target.id) {
     case 'watchlist':
-      triggerWatchlist();
+      renderEmptyWatchList();
       break;
     case 'findMovie':
       renderEmptySearchList();

@@ -1,0 +1,6 @@
+node_modules/
+.vscode/
+.gitattributes
+package-lock.json
+package.json
+vite.config.js

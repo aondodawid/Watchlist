@@ -94,7 +94,7 @@ function renderHTML(data) {
   }
 
   if (search.value === '' && data === false) {
-    renderContent = '<img class="movie-icon" src="./images/Group 199.png" />';
+    renderContent = '<img class="movie-icon" src="./images/Group_199.png" />';
   } else {
     const raiting = data.Ratings[0] ? data.Ratings[0].Value.substring(0, 3) : false;
 
@@ -177,10 +177,10 @@ function handleWatchlistBtn(isWatchlist = false) {
 
 async function renderSearchedMovies(movieToLokFor, isClicked = false) {
   try {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=71aa02e0&s=${movieToLokFor}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=71aa02e0&s=${movieToLokFor}`);
     const data = await response.json();
     data.Search.forEach(async (movie) => {
-      const res = await fetch(`http://www.omdbapi.com/?apikey=71aa02e0&i=${movie.imdbID}`);
+      const res = await fetch(`https://www.omdbapi.com/?apikey=71aa02e0&i=${movie.imdbID}`);
       const dataMovie = await res.json();
       renderHTML(dataMovie);
       handleWatchlistBtn();
@@ -197,7 +197,7 @@ function renderWatchlist() {
 
   movieArray.forEach(async (movie) => {
     try {
-      const res = await fetch(`http://www.omdbapi.com/?apikey=71aa02e0&i=${movie}`);
+      const res = await fetch(`https://www.omdbapi.com/?apikey=71aa02e0&i=${movie}`);
       const data = await res.json();
       renderHTML(data, true);
       handleWatchlistBtn(true);
